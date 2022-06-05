@@ -1,0 +1,38 @@
+/* primary */
+.button {
+  @apply h-10 px-6 border border-gray-300 rounded-md;
+  @apply text-gray-700 bg-transparent;
+}
+.button:hover {
+  @apply bg-gray-100;
+}
+.button:disabled {
+  @apply bg-gray-200 text-gray-400 cursor-not-allowed;
+}
+
+/* red */
+.red {
+  @apply text-white bg-red-500 border-red-500;
+}
+.red:hover {
+  @apply bg-red-600;
+}
+.red:disabled {
+  @apply bg-red-200 text-red-400 border-red-200 cursor-not-allowed;
+}
+
+/* yellow */
+.yellow {
+  @apply text-white bg-yellow-400 border-yellow-400;
+}
+.yellow:hover {
+  @apply bg-yellow-500;
+}
+.yellow:disabled {
+  @apply bg-yellow-200 text-yellow-400 border-yellow-200 cursor-not-allowed;
+}
+
+/* block */
+.block {
+  @apply w-full rounded-none;
+}

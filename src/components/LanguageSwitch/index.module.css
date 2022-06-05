@@ -1,0 +1,7 @@
+.language-switch {
+  @apply w-[260px] py-2 flex justify-evenly items-center bg-sky-100 rounded-md;
+}
+
+.language-switch > div {
+  @apply w-1/2 flex justify-evenly items-center cursor-pointer;
+}
