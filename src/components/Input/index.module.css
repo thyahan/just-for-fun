@@ -1,0 +1,35 @@
+.input {
+  @apply w-full h-10 px-4 border text-base border-gray-200 rounded-md shadow-md;
+}
+
+.input:disabled {
+  @apply cursor-not-allowed;
+}
+
+.number {
+  @apply text-right;
+}
+
+.sm {
+  @apply h-8 text-sm;
+}
+
+.red {
+  @apply text-red-500 border-red-500;
+}
+
+.yellow {
+  @apply text-yellow-500 border-yellow-500;
+}
+
+.text-red {
+  @apply text-red-500;
+}
+
+.text-yellow {
+  @apply text-yellow-500;
+}
+
+.text-blue {
+  @apply text-blue-500;
+}
