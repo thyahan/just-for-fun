@@ -1,0 +1,22 @@
+.form-input {
+  @apply w-full mb-4 relative;
+  @apply md:flex md:mb-8;
+}
+
+.form-input > label {
+  @apply md:w-1/2 md:pr-4 md:flex md:justify-end md:items-center;
+}
+
+.form-input > input {
+  @apply md:w-1/2;
+}
+
+.form-input > span {
+  @apply text-sm;
+  @apply md:absolute md:-bottom-6 left-1/2;
+}
+
+.required:after {
+  @apply ml-1 text-red-500;
+  content: "*";
+}

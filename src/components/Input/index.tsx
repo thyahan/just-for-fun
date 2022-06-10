@@ -12,6 +12,7 @@ export type Props = {
   size?: ISize;
   color?: IColor;
   error?: IError;
+  selectOnFocus?: boolean;
 } & Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "size">;
 
 const Input = (props: Props) => {
@@ -29,11 +30,12 @@ const Input = (props: Props) => {
     .trim();
 
   const onFocus = (e: React.FocusEvent<HTMLInputElement>) => {
-    e.target.select();
+    if (props?.selectOnFocus) e.target.select();
+
     props?.onFocus?.(e);
   };
 
-  return <input {...omit(props, ["size", "color", "error"])} className={cls} onFocus={onFocus} />;
+  return <input {...omit(props, ["size", "color", "error", "selectOnFocus"])} className={cls} onFocus={onFocus} />;
 };
 
 export default Input;

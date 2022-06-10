@@ -2,8 +2,18 @@
   @apply w-full h-10 px-4 border text-base border-gray-200 rounded-md shadow-md;
 }
 
+.input:focus {
+  @apply shadow-sky-200 border-sky-200;
+}
+
 .input:disabled {
   @apply cursor-not-allowed;
+}
+
+input[type="password"].input:not(:placeholder-shown) {
+  @apply text-2xl;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.075rem;
 }
 
 .number {

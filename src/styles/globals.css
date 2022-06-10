@@ -7,4 +7,8 @@
   html {
     font-family: "Prompt", system-ui, sans-serif;
   }
+
+  body {
+    background-color: #F9F9FA;
+  }
 }

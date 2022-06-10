@@ -2,19 +2,24 @@ import React from "react";
 import css from "./index.module.css";
 import Head from "next/head";
 import DarkModeSwitch from "components/DarkModeSwitch";
-import LanguageSwitch from "components/LanguageSwitch";
+import dynamic from "next/dynamic";
+
+const LanguageSwitch = dynamic(() => import("components/LanguageSwitch"), { ssr: false });
 
 interface Props {
   children: React.ReactNode;
   title?: string;
   description?: string;
+  responsive?: boolean;
 }
 
 export const LoginLayout = (props: Props) => {
-  const { children, title = "iService", description = "iService" } = props;
+  const { children, title = "iService", description = "iService", responsive = true } = props;
+
+  const cls = `${css["login-layout"]} ${responsive ? "overflow-hidden": "overflow-auto"}`;
 
   return (
-    <div className={css["login-layout"]}>
+    <div className={cls}>
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
