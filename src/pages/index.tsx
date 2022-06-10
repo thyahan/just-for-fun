@@ -10,36 +10,6 @@ import { identity, pickBy } from "lodash";
 
 const Section = dynamic(() => import("components/Section"), { ssr: false });
 
-const btns: ButtonProps[] = [
-  {
-    children: "Primary",
-    disabled: false,
-  },
-  {
-    children: "Primary",
-    disabled: false,
-    color: "red",
-  },
-  {
-    children: "Primary",
-    disabled: false,
-    color: "yellow",
-  },
-  {
-    children: "Primary",
-    disabled: true,
-  },
-  {
-    children: "Primary",
-    disabled: true,
-    color: "red",
-  },
-  {
-    children: "Primary",
-    disabled: true,
-    color: "yellow",
-  },
-];
 
 const Home: NextPage = () => {
   const [state, setState] = useState({

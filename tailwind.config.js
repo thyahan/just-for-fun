@@ -1,8 +1,12 @@
 module.exports = {
   darkMode: "class",
-  content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./src/{pages,components,modules}/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      animation: {
+        'spin-fast': 'spin 0.5s linear infinite',
+      }
+    },
   },
   plugins: [],
 };
