@@ -6,9 +6,13 @@
 @layer base {
   html {
     font-family: "Prompt", system-ui, sans-serif;
+    padding: 0;
+    margin: 0;
   }
 
   body {
     background-color: #F9F9FA;
+    padding: 0;
+    margin: 0;
   }
 }

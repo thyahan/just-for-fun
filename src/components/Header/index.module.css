@@ -1,0 +1,60 @@
+.header {
+  @apply sticky top-0 w-full bg-white shadow-sm;
+}
+
+.header a {
+  @apply cursor-pointer;
+}
+
+.login-info-sm {
+  @apply p-2 pb-0 mx-2 flex items-center;
+  @apply md:hidden;
+}
+
+.login-info-sm p {
+  @apply w-full truncate;
+}
+
+.login-info-sm > div {
+  @apply px-2 w-full text-center text-gray-500 my-0;
+}
+
+.login-info-sm > div > p:first-of-type {
+  @apply text-gray-800 pb-0 mb-0;
+}
+
+.login-info {
+  @apply hidden;
+  @apply md:visible md:py-4 md:px-4 md:mx-2 md:flex md:border-b md:border-gray-400;
+}
+
+.user-info {
+  @apply w-1/2 text-right;
+}
+
+.company-info {
+  @apply w-1/2 text-left;
+}
+
+.user-info > p,
+.company-info > p {
+  @apply text-gray-400;
+}
+
+.user-info > p:first-of-type,
+.company-info > p:first-of-type {
+  @apply mb-2 font-bold text-gray-700;
+  @apply md:text-lg;
+}
+
+.user-menu {
+  @apply flex justify-center items-center;
+}
+
+.sidebar-wrapper {
+  @apply fixed top-0 bottom-0 left-0 w-full bg-gray-700 opacity-30 z-10;
+}
+
+.sidebar {
+  @apply fixed top-0 bottom-0 left-0 w-3/4 bg-gray-700 shadow-md opacity-100 z-20;
+}

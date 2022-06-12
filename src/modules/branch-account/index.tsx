@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { FaSync } from "react-icons/fa";
 import useBranchAccountDetail from "api/branch/account/useBranchAccountDetail";
 import Section from "components/Section";
+import css from "./index.module.css";
 
 interface Props {}
 
@@ -28,7 +29,7 @@ const BranchAccountModule = (props: Props) => {
     <Section title="Branch Account Module" responsive>
       {is.empty && (
         <div className="flex items-center text-sky-400">
-          <FaSync className={`inline mx-2 ${is.loading ? "animate-spin-fast" : ""}`} />
+          <FaSync className={`relative inline mx-2 ${is.loading ? "animate-spin-fast" : ""}`} />
           {is.allowReload && (
             <p className="cursor-pointer hover:underline" onClick={fetchBranchAccountDetail}>
               reload

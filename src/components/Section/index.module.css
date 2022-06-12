@@ -1,12 +1,12 @@
 .section {
   @apply shadow-md border border-transparent rounded-md bg-white;
-  @apply mx-4 my-4; 
+  @apply mx-4 my-16; 
   @apply mx-auto max-w-[1150px] min-w-[600px]
 }
 
 .section-responsive {
-  @apply shadow-md border border-transparent rounded-md bg-white;
-  @apply mx-4 my-4; 
+  @apply shadow-md border border-transparent rounded-md bg-white overflow-auto;
+  @apply mx-4 my-16; 
   @apply lg:mx-auto lg:max-w-[1150px];
 }
 

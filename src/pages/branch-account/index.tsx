@@ -1,13 +1,16 @@
 import React from "react";
 import BranchAccountModule from "modules/branch-account";
+import { MainLayout } from "components/Layout";
 
 interface Props {}
 
 const BranchAccountPage = (props: Props) => {
   return (
-    <div>
+    <MainLayout>
       <BranchAccountModule />
-    </div>
+      <BranchAccountModule />
+      <BranchAccountModule />
+    </MainLayout>
   );
 };
 

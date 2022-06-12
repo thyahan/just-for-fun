@@ -1,5 +1,6 @@
 import React from "react";
 import css from "./index.module.css";
+import Header from "components/Header";
 
 interface Props {
   children: React.ReactNode;
@@ -7,6 +8,10 @@ interface Props {
 
 export const MainLayout = (props: Props) => {
   const { children } = props;
-  return <div className={css["login-layout"]}>{children}</div>;
+  return (
+    <div className={css["main-layout"]}>
+      <Header />
+      <main>{children}</main>
+    </div>
+  );
 };
-

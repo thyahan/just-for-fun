@@ -1,0 +1,7 @@
+.main-layout {
+  @apply mx-auto bg-gray-200;
+}
+
+.main-layout > main {
+  @apply overflow-auto;
+}

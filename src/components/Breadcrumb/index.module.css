@@ -1,0 +1,21 @@
+.breadcrumb {
+  @apply py-3 px-4 overflow-x-auto;
+}
+
+.breadcrumb > li {
+  @apply inline px-2 font-bold whitespace-nowrap;
+}
+
+.breadcrumb > li:first-of-type {
+  color: #e93b42;
+}
+
+.breadcrumb > li:first-of-type:before {
+  content: "";
+  @apply border-none pl-0;
+}
+
+.breadcrumb > li:before {
+  content: "";
+  @apply border-l border-l-gray-500 pl-4;
+}
