@@ -1,13 +1,25 @@
 import React, { useEffect } from "react";
 import { FaSync } from "react-icons/fa";
-import useBranchAccountDetail from "api/branch/account/useBranchAccountDetail";
+import useBranchAccountDetail, { IBranch } from "api/branch/account/useBranchAccountDetail";
 import Section from "components/Section";
-import css from "./index.module.css";
+import List from "components/List";
+// import css from "./index.module.css";
+import Account from "./Account";
+
+const ROW_HEIGHT = 80;
+const MAX_ROW = 5;
+const MAX_LIST_HEIGHT = ROW_HEIGHT * MAX_ROW;
 
 interface Props {}
 
 const name = (name?: string) => {
   return name ? name : "no-name";
+};
+
+const getListHeight = (size: number): string => {
+  const height = size > MAX_ROW ? MAX_LIST_HEIGHT : size * ROW_HEIGHT;
+
+  return `${height}px`;
 };
 
 const BranchAccountModule = (props: Props) => {
@@ -45,13 +57,26 @@ const BranchAccountModule = (props: Props) => {
       )}
       {data && (
         <ul>
-          {data.map((branch) => (
+          {data.map((branch: IBranch) => (
             <li key={branch.branchNo}>
               <p>{`${branch.branchNo}:${name(branch.branchName)}`}</p>
-              <div className="px-10">
-                {branch.accounts.map((account, i) => (
-                  <p key={i}>{`${account.accountId}:${name(account.accountName)}`}</p>
-                ))}
+              <div
+                className={`border border-gray-100 rounded-md overflow-auto shadow-lg`}
+                style={{
+                  height: getListHeight(branch?.accounts?.length || 0),
+                }}
+              >
+                <List
+                  rowCount={branch.accounts.length}
+                  rowHeight={ROW_HEIGHT}
+                  rowRenderer={({ index, style, key }) => {
+                    return (
+                      <Account checkbox checked={index === 2} style={style} key={key}>{`[${index + 1}] - [${branch.accounts[index].accountId}] ${name(
+                        branch.accounts[index].accountName
+                      )}`}</Account>
+                    );
+                  }}
+                />
               </div>
             </li>
           ))}

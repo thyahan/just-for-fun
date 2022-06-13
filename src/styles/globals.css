@@ -11,8 +11,11 @@
   }
 
   body {
-    background-color: #F9F9FA;
+    background-color: #f9f9fa;
     padding: 0;
     margin: 0;
   }
 }
+
+@import url("~react-virtualized/styles.css");
+@import url("../components/Checkbox/index.css");

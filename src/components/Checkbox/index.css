@@ -1,0 +1,46 @@
+.cs-checkbox {
+  @apply w-6 h-6 relative;
+}
+
+.cs-checkbox > input {
+  @apply absolute w-6 h-6 opacity-0 z-10 cursor-pointer;
+}
+
+.cs-checkbox > .cs-checkbox-inner {
+  @apply absolute top-0 left-0 w-6 h-6 border border-gray-200 rounded-md shadow-sm;
+}
+
+.cs-checkbox:hover > .cs-checkbox-inner {
+  @apply border-red-300;
+}
+
+.cs-checkbox > input[type="checkbox"]:disabled {
+  @apply cursor-not-allowed;
+}
+
+.cs-checkbox > input[type="checkbox"]:disabled + .cs-checkbox-inner {
+  @apply bg-gray-200;
+}
+
+.cs-checkbox > input[type="checkbox"]:checked + .cs-checkbox-inner:after {
+  content: "";
+  @apply absolute left-2 top-[2px] w-2 h-[14px] border-r-[3px] border-b-[3px] border-white rotate-45 shadow-lg;
+}
+
+.cs-checkbox > input[type="checkbox"]:disabled:hover + .cs-checkbox-inner {
+  @apply border-gray-200;
+}
+
+.cs-checkbox > input[type="checkbox"]:checked + .cs-checkbox-inner {
+  @apply bg-red-500 border-red-500;
+}
+
+.cs-checkbox > input[type="checkbox"]:checked:disabled + .cs-checkbox-inner {
+  @apply bg-gray-200 border-gray-200;
+}
+
+/* intermediate */
+.cs-checkbox > input.cs-checkbox-intermediate[type="checkbox"]:checked + .cs-checkbox-inner:after {
+  content: "";
+  @apply absolute left-[5px] top-0 w-3 h-3 border-r-0 border-b-[3px] border-white rotate-0 shadow-lg;
+}

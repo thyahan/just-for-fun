@@ -8,8 +8,6 @@ const BranchAccountPage = (props: Props) => {
   return (
     <MainLayout>
       <BranchAccountModule />
-      <BranchAccountModule />
-      <BranchAccountModule />
     </MainLayout>
   );
 };

@@ -11,7 +11,7 @@ interface IAccount {
   status: string;
 }
 
-interface IBranch {
+export interface IBranch {
   accSize: number;
   accounts: IAccount[];
   branchName: string;

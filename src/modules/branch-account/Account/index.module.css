@@ -1,0 +1,3 @@
+.account {
+  @apply w-full h-full flex justify-start items-center border-b border-red-500;
+}
