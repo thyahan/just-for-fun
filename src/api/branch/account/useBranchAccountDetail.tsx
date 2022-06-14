@@ -2,13 +2,14 @@ import { useCallback, useState } from "react";
 import axios, { AxiosError } from "axios";
 import { branchAccountDetail } from "api";
 
-interface IAccount {
+export interface IAccount {
   accountId: string;
   accountName: string;
   businessLine: string;
   cancelledAcc: string;
   cycleCode: string;
   status: string;
+  checked?: boolean;
 }
 
 export interface IBranch {

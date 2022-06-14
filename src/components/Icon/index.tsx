@@ -9,6 +9,9 @@ interface Props {
   height?: number;
 }
 
+/*
+  represent svg icon from `/public/icon/{filename}.svg`;
+*/
 const Icon = (props: Props) => {
   const { className, alt, name, width = 32, height = 32 } = props;
 

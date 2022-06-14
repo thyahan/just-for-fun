@@ -1,0 +1,19 @@
+.account-status {
+  @apply capitalize text-gray-700;
+}
+
+.active {
+  @apply text-green-400;
+}
+
+.cancel {
+  @apply text-red-400;
+}
+
+.soft-suspend {
+  @apply text-orange-400;
+}
+
+.full-suspend {
+  @apply text-orange-400;
+}

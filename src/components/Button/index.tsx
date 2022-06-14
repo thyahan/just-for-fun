@@ -2,7 +2,7 @@ import React from "react";
 import css from "./index.module.css";
 import { omit } from "lodash";
 
-type IColor = "red" | "yellow";
+type IColor = "red" | "yellow" | "transparent-sky";
 
 export interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   color?: IColor;

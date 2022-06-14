@@ -2,6 +2,7 @@
 .button {
   @apply h-10 px-6 border border-gray-300 rounded-md;
   @apply text-gray-700 bg-transparent;
+  @apply truncate;
 }
 .button:hover {
   @apply bg-gray-100;
@@ -35,4 +36,15 @@
 /* block */
 .block {
   @apply w-full rounded-none;
+}
+
+/* .transparent-sky */
+.transparent-sky {
+  @apply text-sky-500 bg-transparent border-sky-400;
+}
+.transparent-sky:hover {
+  @apply bg-sky-400 text-white;
+}
+.transparent-sky:disabled {
+  @apply bg-sky-200 text-sky-400 border-sky-200 cursor-not-allowed;
 }
